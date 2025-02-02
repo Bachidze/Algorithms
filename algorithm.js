@@ -325,10 +325,9 @@ console.log(recursiveFibonacci(9));  */
 
 // console.log(binarySearch([-5, 2, 4, 6, 10], 2));
 
-
 //Recursive binary search
 
- function recursiveBinarySearch(arr,target) {
+/*  function recursiveBinarySearch(arr,target) {
   return search(arr,target,0,arr.length-1)
  }
 
@@ -351,7 +350,80 @@ console.log(recursiveFibonacci(9));  */
 
  console.log(recursiveBinarySearch([-5,2,4,6,10],10))
  console.log(recursiveBinarySearch([-5,2,4,6,10],6))
- console.log(recursiveBinarySearch([-5,2,4,6,10],20))
+ console.log(recursiveBinarySearch([-5,2,4,6,10],20)) */
+/* 
+function binarySearch(arr, target) {
+  let leftIndex = 0
+  let rightIndex = arr.length - 1
+   while(leftIndex <= rightIndex){
+    let middleIndex = Math.floor((leftIndex + rightIndex) / 2)
+    if(target === arr[middleIndex]){
+      return middleIndex
+    }
+    if(target < arr[middleIndex]){
+      rightIndex = middleIndex - 1
+    }else{
+      leftIndex = middleIndex + 1
+    }
+   }
+   return -1
+}
+
+console.log(binarySearch([-5, 2, 4, 6, 10], 10));
+console.log(binarySearch([-5, 2, 4, 6, 10], 6));
+console.log(binarySearch([-5, 2, 4, 6, 10], 20)); */
+
+
+
+/* let a = 10;
+let b = 5;
+
+let c = a;
+a = b;
+b = c
+
+console.log(a); 
+console.log(b);  */
+
+
+
+// bubble sort
+
+
+function bubbleSort(arr) {
+  let swapped
+  do{
+    swapped = false
+    for(let i = 0;i<arr.length - 1;i++){
+      if(arr[i] > arr[i + 1] ){
+        let temp = arr[i]
+        arr[i] = arr[i + 1] 
+        arr[i + 1] = temp
+        swapped = true
+      }
+    }
+  }while(swapped)
+    return arr
+}
+
+
+console.log(bubbleSort([122,-6,-2,4,8,20]))
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
