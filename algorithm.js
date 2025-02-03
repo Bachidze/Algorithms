@@ -390,7 +390,7 @@ console.log(b);  */
 // bubble sort
 
 
-function bubbleSort(arr) {
+/* function bubbleSort(arr) {
   let swapped
   do{
     swapped = false
@@ -408,8 +408,27 @@ function bubbleSort(arr) {
 
 
 console.log(bubbleSort([122,-6,-2,4,8,20]))
+ */
 
 
+
+// SplitIntoorders
+
+ function splitIntoorders(num){
+  let result = [] //ავიღე ცაირელი მასივი პასუხისთვის
+  let place = 1  // საწყისი ერთეულებისთვის
+
+  while (num > 0){ // როცა გადაცემული რიცხვი მეტია 0 ზე
+    let digit = num % 10 // ვიღებთ ციფრს რიცხვის ბოლო ადგილზე (ერთეულებზე)
+    if(digit !== 0){ // თუ ციფრი ნულს არ უდრის
+      result.unshift(digit * place) // ვამრავლებთ ნაშთს შესაბამის ხარისხზე ზე
+    }
+    num = Math.floor(num / 10)  // თუ გაიყო მაშინ 
+    place *= 10 // ვზრდით ხარისხს
+  }
+  return result
+}
+ console.log(splitIntoorders(2234))
 
 
 
